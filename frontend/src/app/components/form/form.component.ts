@@ -9,9 +9,13 @@ import { FormService } from '../../services/form.service'
 })
 export class FormComponent implements OnInit {
 
+  listUser = [
+
+  ]
+
   constructor(
     public formBuilder: FormBuilder,
-    //public FormServices: FormService
+    public FormServices: FormService
   ) { }
 
   registerForm = this.formBuilder.group({
@@ -36,16 +40,30 @@ export class FormComponent implements OnInit {
         alert('Alguna regla de validación no se está cumpliendo');
         return;
       }
-      // this.FormServices.AlmacenarDatos(this.registerForm.value)
-      // .subscribe( res => {
-      //   console.log(res)
-      // },err => {
-      //   console.log(err)
-      // })
+      this.FormServices.AlmacenarDatos(this.registerForm.value)
+      .subscribe( res => {
+        console.log(res)
+        this.datosTabla()
+      },err => {
+        console.log(err)
+      })
     
     }
 
+    datosTabla(){
+      this.FormServices.listDatos()
+      .subscribe( 
+        res => {
+          this.listUser = res ;
+          console.log(res)
+        },   
+        err => console.log(err)
+      ) 
+    }
+
   ngOnInit(): void {
+
+    this.datosTabla()
   }
 
 }

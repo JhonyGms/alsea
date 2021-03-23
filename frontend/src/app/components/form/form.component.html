@@ -1,8 +1,3 @@
-<!-- <div class="row separador">
-    <div class="col-md-12 text-center ">
-        <h1 class="">Órdenes de Compra</h1>
-    </div>
-</div> -->
 
 <div class="row separador">
     <div class="col-md-5 text-center ">
@@ -95,6 +90,9 @@
                 Guardar
             </button>
         </form>
+        <br>
+        <button type="button" class="btn btn-primary btn-block">Descargar Excel <img src="https://img.icons8.com/fluent/48/000000/microsoft-excel-2019.png"/></button>
+        <button type="button" class="btn btn-primary btn-block">Cargar Excel <img src="https://img.icons8.com/fluent/48/000000/microsoft-excel-2019.png"/></button>
     </div>
     <div class="col-md-7 text-center">
         <div class="d-none d-sm-none d-md-block">        
@@ -124,21 +122,21 @@
                         <th scope="col">Observaciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody  *ngFor="let listUsers of listUser; index as i">
                     <tr>
-                        <th scope="row">1</th>
-                        <td>martes, 23 de marzo de 2021</td>
-                        <td>Juan Perez</td>
-                        <td>Carlos lordan</td>
-                        <td>1022337200</td>
-                        <td>3222224234</td>
-                        <td>jhonatan@dfggdfg.co</td>
-                        <td>carrera 32 #17-215</td>
-                        <td></td>
-                        <td>Conj malva Torre 5 Apto 4018</td>
-                        <td>Colombia</td>
-                        <td>David Orduña</td>
-                        <td>Ninguna</td>
+                        <th scope="row">{{i}}</th>
+                        <td>{{listUsers.fecha}}</td>
+                        <td>{{listUsers.Vendedor}}</td>
+                        <td>{{listUsers.NombreComprador}}</td>
+                        <td>{{listUsers.DocumentoComprador}}</td>
+                        <td>{{listUsers.TelefonoComprador}}</td>
+                        <td>{{listUsers.CorreoComprador}}</td>
+                        <td>{{listUsers.Direccionuno}}</td>
+                        <td>{{listUsers.Direcciondos}}</td>
+                        <td>{{listUsers.Direccionadicional}}</td>
+                        <td>{{listUsers.Pais}}</td>
+                        <td>{{listUsers.Autorizado}}</td>
+                        <td>{{listUsers.Observaciones}}</td>
                     </tr>
 
                 </tbody>

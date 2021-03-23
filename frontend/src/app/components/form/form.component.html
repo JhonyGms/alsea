@@ -1,0 +1,148 @@
+<!-- <div class="row separador">
+    <div class="col-md-12 text-center ">
+        <h1 class="">Órdenes de Compra</h1>
+    </div>
+</div> -->
+
+<div class="row separador">
+    <div class="col-md-5 text-center ">
+        <form (submit)="submit()" [formGroup]="registerForm">
+            <div class="d-none d-sm-none d-md-block">        
+                <h2 class="">Crear Órden de Compra</h2>
+            </div>
+            <div class="d-block d-sm-block d-md-none"> 
+                <br>       
+                <h1 class="">Crear Órden de Compra</h1>
+            </div>
+            <div class="form-grup">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="Vendedor" name="Vendedor" class="form-control"
+                            placeholder="Vendedor" autofocus>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" formControlName="NombreComprador" name="NombreComprador" class="form-control"
+                            placeholder="Nombre Comprador">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-grup">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="DocumentoComprador" name="DocumentoComprador"
+                            class="form-control" placeholder="Documento Comprador">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" formControlName="TelefonoComprador" name="TelefonoComprador"
+                            class="form-control" placeholder="Telefono Comprador">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-grup">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="CorreoComprador" name="CorreoComprador" class="form-control"
+                            placeholder="Correo Comprador">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" formControlName="Direccionuno" name="Direccionuno" class="form-control"
+                            placeholder="Direccion 1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-grup">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="Direcciondos" name="Direcciondos" class="form-control"
+                            placeholder="Direccion 2(Opcional)">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" formControlName="Direccionadicional" name="Direccionadicional"
+                            class="form-control" placeholder="Datos de Direccion Adicional">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-grup">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="Pais" name="Pais" class="form-control" placeholder="País">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" formControlName="Autorizado" name="Autorizado" class="form-control"
+                            placeholder="Autorizado Por">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-grup">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" formControlName="Observaciones" name="Observaciones" class="form-control"
+                            placeholder="Observaciones" style="padding-bottom: 30px; padding-top: 30px;">
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="registerForm.invalid">
+                Guardar
+            </button>
+        </form>
+    </div>
+    <div class="col-md-7 text-center">
+        <div class="d-none d-sm-none d-md-block">        
+            <h2 class="">Órdenes de Compra</h2>
+        </div>
+        <div class="d-block d-sm-block d-md-none"> 
+            <br><br>       
+            <h1 class="">Órdenes de Compra</h1>
+        </div>
+
+        <cdk-virtual-scroll-viewport itemSize=100% class="container">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Numero Orden</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Vendedor</th>
+                        <th scope="col">Nombre Comprador</th>
+                        <th scope="col">Documento Comprador</th>
+                        <th scope="col">Telefono Comprador</th>
+                        <th scope="col">Correo Comprador</th>
+                        <th scope="col">Direccion 1</th>
+                        <th scope="col">Direccion 2(Opcional)</th>
+                        <th scope="col">Datos de Direccion Adicional</th>
+                        <th scope="col">País</th>
+                        <th scope="col">Autorizado Por</th>
+                        <th scope="col">Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>martes, 23 de marzo de 2021</td>
+                        <td>Juan Perez</td>
+                        <td>Carlos lordan</td>
+                        <td>1022337200</td>
+                        <td>3222224234</td>
+                        <td>jhonatan@dfggdfg.co</td>
+                        <td>carrera 32 #17-215</td>
+                        <td></td>
+                        <td>Conj malva Torre 5 Apto 4018</td>
+                        <td>Colombia</td>
+                        <td>David Orduña</td>
+                        <td>Ninguna</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </cdk-virtual-scroll-viewport>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.separador{
+    margin-top: 15px;
+    margin-bottom: 15px;
+} 
+
+@media (min-width: 1200px) { 
+    .separador{   
+        margin-left: 40px;
+        margin-right: 40px;
+        
+    } 
+}
+
+.form-control{
+    background-color: #343a40;
+    color: white;
+    max-width: 100%;
+}
+
+::placeholder { 
+    color: white; 
+}
+
+.col-md-6,.col-md-10,.col-md-12{
+    margin-bottom: 10px;
+}
+
+.container{
+    height: 500px;
+    
+}
+
+td{
+    font-size: 10px;
+    line-height : 10px;
+    text-align: left;
+    vertical-align: middle;
+
+}
